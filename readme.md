@@ -38,7 +38,6 @@ mysql> SELECT *
     -> WHERE level = 'magistrale';
     38 rows in set (0.00 sec)
 
-
 7. Da quanti dipartimenti è composta l'università? (12)
 mysql> describe departments;
     ->SELECTt id FROM departments;
@@ -49,22 +48,6 @@ mysql> SELECT phone
     -> FROM teachers
     -> WHERE phone IS NOT NULL;
     50 rows in set (0.00 sec)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # database intro library
