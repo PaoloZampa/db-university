@@ -39,8 +39,8 @@ mysql> SELECT *
     38 rows in set (0.00 sec)
 
 7. Da quanti dipartimenti è composta l'università? (12)
-mysql> describe departments;
-    ->SELECTt id FROM departments;
+mysql> DESCTRIBE departments;
+    ->SELECT id FROM departments;
     12 rows in set (0.00 sec)
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
