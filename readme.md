@@ -33,6 +33,12 @@ mysql> SELECT *
     21 rows in set (0.00 sec)
 
 6. Selezionare tutti i corsi di laurea magistrale (38)
+mysql> SELECT *
+    -> FROM degrees
+    -> WHERE level = 'magistrale';
+    38 rows in set (0.00 sec)
+
+
 7. Da quanti dipartimenti è composta l'università? (12)
 mysql> describe departments;
     ->SELECTt id FROM departments;
