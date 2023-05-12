@@ -46,7 +46,7 @@ mysql> DESCTRIBE departments;
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 mysql> SELECT phone    
     -> FROM teachers
-    -> WHERE phone IS NOT NULL;
+    -> WHERE phone IS NULL;
     50 rows in set (0.00 sec)
 
 
