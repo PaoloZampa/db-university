@@ -22,8 +22,7 @@ WHERE course_teacher.teacher_id = 44
 AND teachers.name = 'Fulvio'
 AND teachers.surname = 'Amato';
 
-4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il
-relativo dipartimento, in ordine alfabetico per cognome e nome
+4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
 SELECT students.surname AS student_surname, students.name AS student_name, students.date_of_birth, degrees.name AS degree_name, degrees.level, degrees.email , departments.name AS department_name
 FROM students
 JOIN degrees ON students.degree_id = degrees.id
@@ -49,3 +48,10 @@ WHERE departments.name = 'Dipartimento di Matematica';
 
 7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per
 superare ciascuno dei suoi esami
+SELECT students.name AS student_name, students.surname as student_surname, courses.name AS course_name, COUNT(students.name) AS number_tentativi
+FROM exam_student
+JOIN exams ON exam_student.exam_id = exams.id
+JOIN students ON exam_student.student_id = students.id
+JOIN courses ON exams.course_id = courses.id
+GROUP BY student_name, course_name, student_surname
+ORDER BY number_tentativi DESC;
