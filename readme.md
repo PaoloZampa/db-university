@@ -1,4 +1,4 @@
-# QUERY
+# QUERY 1
 
 1. Selezionare tutti gli studenti nati nel 1990 (160)
 mysql> select *
